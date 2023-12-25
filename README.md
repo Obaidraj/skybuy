@@ -41,7 +41,7 @@ Welcome to the Sky Buy E-Commerce Platform repository! This project comprises a 
 
 ## License
 
-This project is licensed under the Sky Buy. See the [LICENSE.md](/LICENSE.md) file for details.
+This project is licensed under the Sky Buy. See the [LICENSE.md](https://portfolio-obaidraj.vercel.app/) file for details.
 
 ## Contact Information
 
