@@ -6,6 +6,7 @@ interface ProductState {
 productDetail:any;
   hasMoreProduct: boolean;
   products: any;
+  
 }
 const initialState: ProductState = {
   loadingProduct: false,

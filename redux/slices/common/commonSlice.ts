@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 interface WishlistState {
    
+  cartItems:any
     wishlist: string[];
-    cartItems:any
+    
    
   }
   const initialState: WishlistState = {
        
     wishlist: [],
-    cartItems:[]
+    cartItems:[],
    
   
   }
@@ -26,15 +27,17 @@ interface WishlistState {
             );
         },
         addtoCart:(state,{payload})=>{
-         
-    const data={...payload}
-    const newArr=[...state.cartItems,data]
-    console.log(newArr)
+  
+    state.cartItems=[...state.cartItems,payload]
+
         },
         removefromcart:(state,action)=>{
           state.cartItems = state.cartItems.filter(
             (item:any) => item.id !== action.payload.id
             );
+        },
+        edititemincart:(state,action)=>{
+          
         }
 
     }
