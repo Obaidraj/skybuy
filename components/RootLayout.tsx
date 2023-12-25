@@ -41,7 +41,7 @@ const MainLayout = ({ children }: Props) => {
           />
         </div>}
         <Drawer isOpen={isOpen} setIsOpen={setIsOpen} title={"Categories"}>
-          <Category />
+          <Category setIsOpen={setIsOpen}/>
         </Drawer></main>
       </div>
       <hr />

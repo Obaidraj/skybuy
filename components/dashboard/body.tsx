@@ -39,7 +39,7 @@ const Body = (props: Props) => {
        {  !hasMoreProduct&& <LoadCard />}
         </div>
       }
-      height={width>400?"58dvh":"70dvh"}
+      height={width>420?"58dvh":"70dvh"}
       className="grid grid-cols-1 xs:grid-col-1 justify-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-2 h-full "
 
     

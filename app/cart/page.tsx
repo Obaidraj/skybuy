@@ -31,7 +31,7 @@ const page = (props: Props) => {
     <div className="flex flex-col h-full w-full">
       <div className="px-2 py-1 text-xl  uppercase"> Shopping Cart</div>
       <hr />
-      <div className="flex justify-between lg:flex-col md:flex-row sm:flex-col xs:flex-col xl:flex-row px-2 h-full">
+      <div className="flex justify-between md:flex-row flex-col px-2 h-full">
         <div className="flex lg:w-full xl:w-[70%] md:w-[70%] sm:w-full xs:w-full  h-full">
         <div className='flex  gap-1 flex-col  '>
           <div className="flex flex-col gap-2 my-2 h-[60dvh] overflow-y-auto">
@@ -41,12 +41,12 @@ const page = (props: Props) => {
 {cartItems.length<1&& <p>Your shopping cart is empty.</p>}
 
           </div>
-          <div className="flex">
+          <div className="flex gap-1  sm:flex-row flex-col ">
 
 
 <Card title={"Security policy"} icon={ <FaLock className="text-3xl"/>} desc={"Implementing robust encryption protocols and regular security audits to safeguard customer data and ensure a secure online shopping experience."}/>
-<Card title={"Delivery policy"} icon={ <FaTruckFast className="text-3xl"/>} desc={"Fast and reliable doorstep delivery, ensuring your purchases reach you swiftly and securely."}/>
 <Card title={"Return policy"} icon={ <GiReceiveMoney className="text-3xl"/>} desc={"Hassle-free returns: Shop with confidence knowing our e-commerce site offers a seamless and customer-friendly return policy"}/>
+<Card title={"Delivery policy"} icon={ <FaTruckFast className="text-3xl"/>} desc={"Fast and reliable doorstep delivery, ensuring your purchases reach you swiftly and securely."}/>
           </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ function Item({item}) {
 
   }
   return (
-    <div className="flex justify-between items-center border rounded-md h-[25%] px-2">
+    <div className="flex justify-between items-center border gap-2  rounded-md h-[25%] px-2">
       <div><Image
       src={item.thumbnail}
       alt="image"

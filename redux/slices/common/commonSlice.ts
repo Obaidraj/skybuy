@@ -36,10 +36,14 @@ interface WishlistState {
             (item:any) => item.id !== action.payload.id
             );
         },
-        edititemincart:(state,action)=>{
-          
+        edititemincart:(state,{payload})=>{
+          console.log(payload)
+          const index = state.cartItems.findIndex(obj => obj.id === payload.id);
+          console.log(index)
+state.cartItems[index]=payload
+        
         }
 
     }
   })
-  export const {addToWishlist,removeFromWishlist,addtoCart,removefromcart}=commonSlice.actions;
+  export const {addToWishlist,removeFromWishlist,addtoCart,removefromcart,edititemincart}=commonSlice.actions;
